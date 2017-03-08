@@ -17,6 +17,21 @@
 	html:xs XHTML1 엄격 모드 표준 문서 출력
 	html:5 또는 ! HTML5 표준 문서 출력
 
+	CSS 
+	^ : 등반연산자 (상위의 태그의 형제)
+	* : 코드 반복
+	//속성 연산자로 HTML 코드구조 생성하기
+	# : ID
+	. : CLASS
+	//항목 속성연산
+	$: 숫자가 자동으로 증가.
+	$$
+	$$$
+	$@: 역순으로 증가.
+
+	{}: 텍스트 생성 ex) a{링크}
+
+	lorem : 더미텍스트
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -25,6 +40,25 @@
 	<title>Document</title>
 </head>
 <body>
+	<!-- header>h1+p^nav+main+footer -->
+	<header>
+		<h1></h1>
+		<p></p>
+	</header>
+	<nav></nav>
+	<main></main>
+	<footer></footer>
+	<!-- #app>#header+main.class+#footer.siteinfo -->
+	<div id="app">
+		<div id="header"></div>
+		<main class="page"></main>
+		<div id="footer" class="siteinfo"></div>
+	</div>
+	<!-- .ht-links>a[href="http://ht-link.com" target="_blank"]*2 -->
+	<div class="ht-links">
+		<a href="http://ht-link.com" target="_blank"></a>
+		<a href="http://ht-link.com" target="_blank"></a>
+	</div>
 	
 </body>
 </html>
